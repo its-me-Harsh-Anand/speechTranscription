@@ -24,7 +24,7 @@
         if (!MediaRecorder.isTypeSupported('audio/webm')) return alert('Browser not supported')
         const mediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm' })
 
-        const socket = new WebSocket(DG_ENDPOINT, ['token', 'yourAPIkeyFromDeepgram'])
+        const socket = new WebSocket(DG_ENDPOINT, ['token', 'eb3d337b4fa432123de6be12f98fd12a1da53c7b'])
 
         socket.onopen = () => {
           mediaRecorder.addEventListener('dataavailable', async (event) => {
